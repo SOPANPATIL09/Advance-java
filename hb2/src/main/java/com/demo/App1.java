@@ -17,7 +17,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;  
 
 public class App1 {
-	public static void main(String[] args) {
+	public static void main(String []args) {
 		 
 		Configuration con=new Configuration().configure();
 	 	

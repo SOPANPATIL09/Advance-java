@@ -16,13 +16,13 @@ public class Laptop {
 	private double price;
 	@OneToOne
 	private Student student;
+
 	public Student getStudent() {
 		return student;
 	}
 	public void setStudent(Student student) {
 		this.student = student;
 	}
-	@Override
 	public String toString() {
 		return "Laptop [id=" + id + ", name=" + name + ", price=" + price + "]";
 	}

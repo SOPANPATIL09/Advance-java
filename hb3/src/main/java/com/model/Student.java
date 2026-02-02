@@ -47,6 +47,12 @@ public class Student {
 	public void setPercentage(double percentage) {
 		 this.percentage = percentage;
 	}
+	public Laptop getLaptop() {
+		return laptop;
+	}
+	public void setLaptop(Laptop laptop) {
+		this.laptop = laptop;
+	}
 	
 	
 

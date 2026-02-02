@@ -18,8 +18,10 @@ public class App
     	Transaction tx=session.beginTransaction();
     	
     	
-       
-    	
+    	Student s=session.get(Student.class, 3);
+          System.out.println(s);
+          System.out.println(s.getLaptop());
+        
 	 	tx.commit();
 	 	session.close();
     }
