@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Student {
@@ -16,7 +17,8 @@ public class Student {
 	private String city;
 	@Column(columnDefinition ="double(5,2)")
 	private double percentage;
-	
+	@OneToOne
+	private Laptop laptop;
 	@Override
 	public String toString() {
 		return "Student [id=" + id + ", name=" + name + ", city=" + city + ", percentage=" + percentage + "]";

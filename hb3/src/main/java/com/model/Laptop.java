@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Laptop {
@@ -13,7 +14,14 @@ public class Laptop {
 	private int id;
 	private String name;
 	private double price;
-	
+	@OneToOne
+	private Student student;
+	public Student getStudent() {
+		return student;
+	}
+	public void setStudent(Student student) {
+		this.student = student;
+	}
 	@Override
 	public String toString() {
 		return "Laptop [id=" + id + ", name=" + name + ", price=" + price + "]";
