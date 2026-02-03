@@ -8,6 +8,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
+import com.model.Departments;
 import com.model.Gifts;
 import com.model.Laptop;
 import com.model.Student;
@@ -20,21 +21,23 @@ public class App
     	SessionFactory sf=con.buildSessionFactory();
     	Session session =sf.openSession();
     	Transaction tx=session.beginTransaction();
-    
-    	
-    	Student s=session.get(Student.class, 2);
-    	System.out.println(s);
-    	List<Gifts> list = s.getGifts();
-    	for(Gifts g:list) {
-    		System.out.println(g);
-    	}
-    	
-    
-    	
-    	
-    	//session.save();
+         int count=0;
+    	Departments d=session.get(Departments.class, 3);
+        System.out.println(d);
+        
+         List<Student> list = d.getStudent();
+            for(Student s:list) {
+            	count+=s.getGifts().size();
+            }  
+            
+            System.out.println(count);
+            
+      
+      
+    	   
 	 	tx.commit();
 	 	session.close();
+    	  
     }
      
     
