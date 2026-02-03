@@ -18,6 +18,7 @@
 	   
 	   <mapping class="com.model.Student"/>
 	   <mapping class="com.model.Laptop"/>
+	   <mapping class="com.model.Gifts"/>
 	    
 	</session-factory>
 	</hibernate-configuration>	
